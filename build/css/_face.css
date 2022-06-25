@@ -1,11 +1,10 @@
+@import url(face-assets/_face_assets.css);
 .face {
   position: relative;
-  height: 60vw;
-  width: 60vw;
-  margin: 15% auto;
+  margin: 50px auto;
 }
 
-.face img {
+.face > img {
   position: absolute;
   top: 0;
   left: 0;

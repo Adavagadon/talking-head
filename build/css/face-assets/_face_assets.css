@@ -1,0 +1,18 @@
+@import url(_asset_hearts.css);
+@import url(_asset_damage.css);
+@import url(_asset_confuse.css);
+@import url(_asset_stars.css);
+
+.face__assets {
+  width: 100%;
+  height: 100%;
+}
+
+.face__asset {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

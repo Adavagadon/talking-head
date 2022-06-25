@@ -1,0 +1,36 @@
+.face__asset-damaged,
+.face__asset-cloud {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+}
+
+.face__asset-cloud {
+  top: -10%;
+  left: -15%;
+}
+
+.face__assets_damage-play .face__asset-damaged {
+  opacity: 1;
+}
+
+.face__assets_cloud-play .face__asset-cloud {
+  animation: cloud 2s ease-in-out forwards;
+}
+
+@keyframes cloud {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
