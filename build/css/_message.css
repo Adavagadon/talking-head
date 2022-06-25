@@ -10,7 +10,6 @@
   color: #fff;
   backdrop-filter: brightness(0.7) blur(3px);
   opacity: 0;
-  letter-spacing: 2pt;
 }
 
 .message_show {

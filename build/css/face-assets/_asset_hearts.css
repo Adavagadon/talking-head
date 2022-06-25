@@ -1,0 +1,47 @@
+.face__asset-heart {
+  position: absolute;
+  opacity: 0;
+}
+
+.face__asset-heart1 {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 15%;
+}
+.face__asset-heart2 {
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 20%;
+}
+.face__asset-heart3 {
+  width: 50%;
+  height: 50%;
+  top: 30%;
+  left: 50%;
+}
+
+.face__assets_hearts-play .face__asset-heart1 {
+  animation: heart 1.5s ease-in-out forwards;
+}
+.face__assets_hearts-play .face__asset-heart2 {
+  animation: heart 1.25s 0.4s ease-in-out forwards;
+}
+.face__assets_hearts-play .face__asset-heart3 {
+  animation: heart 1s 0.7s ease-in-out forwards;
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1) translateY(-30%);
+  }
+}
