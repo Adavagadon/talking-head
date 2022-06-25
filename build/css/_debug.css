@@ -1,0 +1,16 @@
+.debug__wrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: limegreen;
+}
+
+.debug__title {
+  font-weight: 500;
+}
+
+.debug__container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}

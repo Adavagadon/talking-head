@@ -1,0 +1,17 @@
+@import url(_fonts.css);
+@import url(_face.css);
+@import url(_message.css);
+@import url(_debug.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Onest';
+}
+
+main {
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+}
