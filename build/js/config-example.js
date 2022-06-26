@@ -1,4 +1,5 @@
-// Make a copy of this config with config.js name
+// Do not modify this file!
+// Make a copy of this config with config.js name and modify it
 
 // Debug Settings
 export const isDebug = true;
