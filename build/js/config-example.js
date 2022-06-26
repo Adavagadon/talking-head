@@ -1,3 +1,5 @@
+// Make a copy of this config with config.js name
+
 // Debug Settings
 export const isDebug = true;
 export const debugTextColor = '#22aa22';

@@ -1,9 +1,9 @@
 import { lowVolume, midVolume, highVolume } from '../config.js';
 
 export const getMouthId = (loudness) => {
-  if (loudness >= highVolume) return Math.floor(Math.random() * (5 - 4) + 4);
-  if (loudness >= midVolume) return Math.floor(Math.random() * (3 - 2) + 2);
-  if (loudness >= lowVolume) return Math.floor(Math.random() * (1 - 0) + 0);
+  if (loudness >= highVolume) return Math.round(Math.random() * (5 - 4) + 4);
+  if (loudness >= midVolume) return Math.round(Math.random() * (3 - 2) + 2);
+  if (loudness >= lowVolume) return Math.round(Math.random() * (1 - 0) + 0);
   return -1;
 };
 

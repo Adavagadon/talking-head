@@ -1,4 +1,9 @@
-import { sensitivity, noiseSuppression, echoCancellation } from '../config.js';
+import {
+  mouthSpeed,
+  sensitivity,
+  noiseSuppression,
+  echoCancellation,
+} from '../config.js';
 import { getMouthId, switchMouth } from './utils.js';
 import sendMessage from '../notification.js';
 import Volume from '../debug/Volume.js';
@@ -52,5 +57,5 @@ const volumeCallback = () => {
 window.addEventListener('click', () => {
   sendMessage('Activated');
   context.resume();
-  volumeInterval = setInterval(volumeCallback, 10);
+  volumeInterval = setInterval(volumeCallback, mouthSpeed);
 });
