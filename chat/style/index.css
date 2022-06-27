@@ -17,12 +17,12 @@ body {
 
 .chat {
   padding-top: 5px;
-  width: 500px;
-  height: 500px;
+  width: 100vw;
+  height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-color: #0005;
+  /* background-color: #0005; */
   transition: 1s;
 }
 

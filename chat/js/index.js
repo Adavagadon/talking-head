@@ -1,5 +1,5 @@
 import { channelName, idleDelay, idleOpacity } from './config.js';
-import { appendMessage, setOpacity } from './utils.js';
+import { replaceEmotes, appendMessage, setOpacity } from './utils.js';
 
 let timeStamp = Date.now();
 
@@ -11,6 +11,8 @@ client.on('connected', onConnectedHandler);
 client.connect().catch((err) => {});
 
 function onMessageHandler(target, context, msg, self) {
+  if (context.emotes) msg = replaceEmotes(context.emotes, msg);
+
   appendMessage(context['display-name'], msg, context.color);
   timeStamp = Date.now();
   setOpacity(1);
