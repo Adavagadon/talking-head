@@ -15,8 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({ origin: '*' }));
 
-app.use(express.static(PATH_TO_HEAD));
-app.use(express.static(PATH_TO_CHAT));
+app.use('/head', express.static(PATH_TO_HEAD));
+app.use('/chat', express.static(PATH_TO_CHAT));
 
 app.get('/head', (req, res) => {
   res.sendFile(path.join(PATH_TO_HEAD, 'index.html'));
