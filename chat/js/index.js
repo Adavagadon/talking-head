@@ -11,7 +11,7 @@ client.on('connected', onConnectedHandler);
 client.connect().catch((err) => {});
 
 function onMessageHandler(target, context, msg, self) {
-  if (context.emotes) msg = replaceEmotes(context.emotes, msg);
+  msg = replaceEmotes(context.emotes, msg);
 
   appendMessage(context['display-name'], msg, context.color);
   timeStamp = Date.now();

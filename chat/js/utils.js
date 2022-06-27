@@ -7,18 +7,34 @@ const rBr = document.createElement('span');
 lBr.innerHTML = '<';
 rBr.innerHTML = '>';
 
-export const replaceEmotes = (emotes, msg) => {
-  Object.entries(emotes).forEach((entry) => {
-    const id = entry[0];
-    const range = entry[1][0].split('-');
+export const replaceEmotes = (emotes, message) => {
+  if (!emotes) return message;
 
-    const emote = msg.slice(range[0], +range[1] + 1);
-    const img = `<img src="${EMOTES_URL}${id}/1.0">`;
+  const stringReplacements = [];
 
-    msg = msg.replace(new RegExp(emote, 'g'), img);
+  Object.entries(emotes).forEach(([id, positions]) => {
+    const position = positions[0];
+    const [start, end] = position.split('-');
+    const stringToReplace = message.substring(
+      parseInt(start, 10),
+      parseInt(end, 10) + 1
+    );
+
+    stringReplacements.push({
+      stringToReplace: stringToReplace,
+      replacement: `<img src="${EMOTES_URL}${id}/1.0">`,
+    });
   });
 
-  return msg;
+  const messageHTML = stringReplacements.reduce(
+    (acc, { stringToReplace, replacement }) => {
+      // obs browser doesn't seam to know about replaceAll
+      return acc.split(stringToReplace).join(replacement);
+    },
+    message
+  );
+
+  return messageHTML;
 };
 
 export const appendMessage = (sender, text, color) => {
